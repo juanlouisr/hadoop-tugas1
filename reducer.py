@@ -14,10 +14,10 @@ for line in sys.stdin:
         current_count += count
     else:
         if current_date and current_type:
-            print(f'{current_date}\t{current_type}\t{current_count}')
+            print(f'{current_date},{current_type},{current_count}')
         current_date = date
         current_type = obj_type
         current_count = count
 
 if current_date and current_type:
-    print(f'{current_date}\t{current_type}\t{current_count}')
+    print(f'{current_date},{current_type},{current_count}')
